@@ -5,15 +5,15 @@ class Hippo : Animal() { //Это означает «класс Hippo являе
     override val habitat: String = "water"
 
     override fun makeNoise() {
-
+        println("Grunt! Grunt!")
     }
 
     override fun eat() {
-
+        println("The Hippo is eating $food")
     }
 
-    override fun roam() {
-
-    }
+//    override fun roam() {
+//
+//    }
 
 }

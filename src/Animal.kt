@@ -1,20 +1,19 @@
 //Супер класс, от которого все будут наследоваться
-open class Animal {
+abstract class Animal {
 
-    open val image = ""
-    open val food = ""
-    open val habitat = ""
+    abstract val image: String
+    abstract val food: String
+    abstract val habitat: String
     var hunger = 10
 
-    open fun makeNoise() {
-        println("The Animal is making a noise")
-    }
-    open fun eat() {
-        println("The Animal is eating")
-    }
+    abstract fun makeNoise()
+
+    abstract fun eat()
+
     open fun roam() {
         println("The Animal is roaming")
     }
+
     fun sleep() {
         println("The Animal is sleeping")
     }

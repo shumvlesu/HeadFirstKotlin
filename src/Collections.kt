@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
 
     data class Recipe(var name: String)
 
@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     println("mShoppingList items added: $mShoppingList")
 
     if (mShoppingList.contains("Tea")) {
-        mShoppingList.set(mShoppingList.indexOf("Tea"), "Coffee")
+        mShoppingList[mShoppingList.indexOf("Tea")] = "Coffee"
     }
 
     mShoppingList.sort()

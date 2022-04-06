@@ -21,4 +21,29 @@ fun main(args: Array<String>) {
     val myLambda: () -> Unit = { println("Hi!") }
     myLambda()
 
+
+    //лямбда как еще один параметр
+    fun convert(x: Double, converter: (Double) -> Double) : Double {
+        val result = converter(x)
+        println("$x is converted to $result")
+        return result
+    }
+
+    //лямбда как единственный параметр
+    fun convertFive(converter: (Int) -> Double) : Double {
+        val result = converter(5)
+        println("5 is converted to $result")
+        return result
+    }
+
+
+    //Здесь можно использовать «it», потому что каждое лямбда-выражение использует один параметр,
+    // тип которого может быть автоматически определен компилятором.
+    convert(20.0) { it * 1.8 + 32 }
+
+    //лямбда как единственный параметр, круглые скобки можно опустить
+    convertFive { it * 1.8 + 32 }
+
+
+
 }

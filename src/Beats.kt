@@ -26,6 +26,7 @@ fun playSound(file: String) {
 }
 
 fun main() {
+    //В этом проекте не будет работать перенес код в отдельный проект. На гитхабе есть.
     GlobalScope.launch {playBeats("x-x-x-x-x-x-", "toms.aiff")}
     playBeats("x-----x-----", "crash_cymbal.aiff")
 }
